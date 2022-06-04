@@ -1,9 +1,8 @@
-
-
 // const twoSum = (nums, target) => {
 // 	for (let i = 0; i < nums.length; i++) {
 //         const num1 = nums[i]
 		
+
 // 		for (let j = i+1; j < nums.length; j++) {
 // 			const num2 = nums[j]
 //             const sum =  num1 + num2
