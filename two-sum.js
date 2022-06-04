@@ -1,3 +1,5 @@
+
+console.log('ggg')
 // const twoSum = (nums, target) => {
 // 	for (let i = 0; i < nums.length; i++) {
 //         const num1 = nums[i]
