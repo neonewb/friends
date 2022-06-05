@@ -1,9 +1,8 @@
-// 6.1*) вывести в консоль числа(строки?) в таком виде
-//
-// 0
-// 000
-// 00000
-// 0000000
+console.log('WORLD')
+console.log('WORLD')
+console.log('WORLD')
+console.log('WORLD')
+
 
 function logPyramids(height, symbol, step) {
 	let strLength = 1
