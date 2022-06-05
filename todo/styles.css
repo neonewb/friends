@@ -27,6 +27,21 @@
 	margin-top: 6px;
 }
 
+.todo__item-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.todos__delete {
+	cursor: pointer;
+	
+}
+.todos__delete:hover svg path {
+	fill: #D15555;
+	fill-opacity: 1;
+}
+
 .todos__item {
 	margin-top: 2px;
 	cursor: pointer;
