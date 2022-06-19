@@ -9,58 +9,125 @@
 	margin: 0;
 }
 
+:root {
+	--color-primary: #AF2F2F;
+	--color-hover: #D15555;
+	--border-hint: #D0D0D0;
+}
+
+
 .todos {
-	margin-top: 32px;
+	margin: 32px auto;
 	display: flex;
-	align-items: center;
+	align-items: stretch;
 	flex-direction: column;
+	width: 919px;
+}
+
+.todos__show-todos {
+	cursor: pointer;
+	transition: all 500ms;
+
+}
+
+.todos__show-todos:hover svg path {
+	fill: black;
+}
+
+.todos__show-todos_rotate {
+	transform: rotate(-180deg);
 }
 
 .todos__title {
-	color:#AF2F2F;
+	text-align: center;
+	color: var(--color-primary);
 	font-family: cursive;
 	font-size:72px;
 	font-weight:700;
 	line-height: 86px;
 }
 
-.todos__input {
+.todos__input-container {
+	display: flex;
+	align-items: center;
 	margin-top: 16px;
-	width: 919px;
-	height:80px;
+	/* box-shadow: inset 0px -1px 1px rgba(0, 0, 0, 0.25); */
+	border: 1px solid var(--border-hint);
+}
+
+
+.todos__input {
 	background: rgba(255, 255, 255, 0.03);
-	box-shadow: inset 0px -1px 1px rgba(0, 0, 0, 0.25);
 	font-weight: 400;
 	font-size: 36px;
 	line-height: 43px;
-	padding-left: 88px;
-	border: 1px solid #AF2F2F;;
+	outline: none;
+	border: none;
+}
+
+/* .todos__input:focus,
+.todos__input:active {
+	outline: none;
+	border: 1px solid var(--color-primary);
+
+} */
+
+.todos__list-container {
+	overflow: hidden;
 }
 
 .todos__list {
-	margin-top: 6px;
+	transition: all 500ms;
+}
+
+.todos__list_hidden {
+	transform: translateY(-100%);
 }
 
 .todo__item-container {
+	padding-left: 24px;
+	padding-right: 24px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	border: 1px solid var(--border-hint);
+	border-top: none;
 }
 
-.todos__delete {
-	cursor: pointer;
-	
+.todo__title {
+	display: flex;
+	gap: 16px;
+	align-items:center;
 }
-.todos__delete:hover svg path {
-	fill: #D15555;
+
+.todo__check {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	border: solid 1px var(--border-hint);
+}
+
+.todo__delete {
+	cursor: pointer;
+}
+
+.todo__delete:hover svg path {
+	fill: var(--color-hover);
 	fill-opacity: 1;
 }
 
-.todos__item {
-	margin-top: 2px;
+.todo__item {
 	cursor: pointer;
+	font-size: 36px;
+	line-height: 43px;
+
 }
 
-.todos__item_done {
+.todo__item_done {
+	color: var(--border-hint);
 	text-decoration: line-through;
 }
