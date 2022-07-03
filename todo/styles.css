@@ -131,3 +131,36 @@
 	color: var(--border-hint);
 	text-decoration: line-through;
 }
+
+.todos__navigator {
+	display: flex;
+	justify-content:space-between;
+	align-items: center;
+	font-family:cursive;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 8px;
+	border:  solid 1px var(--border-hint);
+	border-top: none;
+}
+
+.todos__filter{
+	display:flex;
+	justify-content: center;
+	gap: 8px;
+}
+
+.todos__filter-button {
+	padding: 8px 16px;
+	cursor: pointer;
+}
+
+.todos__filter_selected {
+	border: 1px solid var(--color-primary);
+	border-radius: 30px;
+}
+
+.todos__clear {
+	cursor: pointer;
+	text-decoration: underline;	
+}

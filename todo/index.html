@@ -5,7 +5,15 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="./styles.css">
-	<script defer src="./index.js"></script>
+	<script defer type="module" src="./scripts/index.js"></script>
+	<script defer type="module" src="./scripts/checkTodo.js"></script>
+	<script defer type="module" src="./scripts/createElement.js"></script>
+	<script defer type="module" src="./scripts/createTodo.js"></script>
+	<script defer type="module" src="./scripts/initInput.js"></script>
+	<script defer type="module" src="./scripts/initTodoList.js"></script>
+	<script defer type="module" src="./scripts/initCheckBoxes.js"></script>
+	<script defer type="module" src="./scripts/initDeleteList.js"></script>
+	<script defer type="module" src="./scripts/updateLeftTodos.js"></script>
 	<title>ToDo List</title>
 </head>
 <body>
@@ -52,6 +60,26 @@
 				</div>
 			</div>
 		</div>
+				<div class="todos__navigator">
+						<div class="todos__left">
+							1 todos left
+						</div>
+						<div class="todos__filter">
+							<div class="todos__filter-button todos__filter_selected">
+								All
+							</div>
+							<div class="todos__filter-button">
+								Active
+							</div>
+							<div class="todos__filter-button">
+								Completed
+							</div>
+						</div>
+						<div class="todos__clear">
+							Clear Completed
+						</div>
+				</div>
+			
 	</div>
 </body>
 </html>
