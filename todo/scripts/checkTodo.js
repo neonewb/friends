@@ -1,3 +1,5 @@
+import {changeTodo} from './index.js';
+
 /**
  * Отмечает тудушку выполненной
  * @param {MouseEvent} event
@@ -6,6 +8,9 @@ export const checkTodo = (event) => {
 	const todoEl = event.target.closest('.todo__title');
 
 	todoEl.querySelector('.todo__item').classList.toggle('todo__item_done');
+
+	const title = todoEl.querySelector('.todo__item').innerText;
+	changeTodo(title);
 
 	const checkEl = todoEl.querySelector('.todo__check');
 	// Проверяем есть ли чекбокс внутри

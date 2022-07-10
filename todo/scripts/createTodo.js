@@ -1,5 +1,6 @@
 import {createElement} from './createElement.js';
-import {checkTodo} from "./checkTodo.js";
+import {checkTodo} from './checkTodo.js';
+import {addTodo} from './index.js';
 
 /** Создание новой тудушки */
 export const createTodo = (event) => {
@@ -9,6 +10,9 @@ export const createTodo = (event) => {
 	const newTodo = createElement('todo__item');
 	// Вставляем в новый элемент текст из инпута
 	newTodo.innerText = event.target.value;
+
+	// Добавили новую тудшку в стейт
+	addTodo(event.target.value, false)
 
 	// Вешаем слушатель на клик, чтобы отметить выполненной
 	newTodo.addEventListener('click', (event) => {
