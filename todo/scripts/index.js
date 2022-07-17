@@ -5,6 +5,14 @@ import {initCheckBoxes} from "./initCheckBoxes.js";
 import {initDeleteList} from "./initDeleteList.js";
 import {updateLeftTodos} from "./updateLeftTodos.js";
 
+/**
+ * TODO:
+ * Фильтрация активных/завершённых
+ * Редактирование татйла у тудушек
+ * Очистка завершённых
+ * Анимация сворачивания
+ */
+
 initInput();
 initTodoList();
 initCheckBoxes();
@@ -41,10 +49,18 @@ export const addTodo = (title, completed) => {
  export const changeTodo = (title) => {
 	const todo = todoArray.find((todo) => todo.title === title);
 	todo.completed = !todo.completed;
-
 	updateLeftTodos(todoArray);
 }
 
+/**
+ * Удаляем тудушку
+ * @param {string} title тайтл тудушки
+ */
+ export const deleteTodo = (title) => {
+	const todoIndex = todoArray.findIndex((todo) => todo.title === title)
+	todoArray.splice(todoIndex, 1);
+	updateLeftTodos(todoArray);
+}
 
 // Ищем все тудушки в дереве по классу todo__item
 const todosList = document.querySelectorAll('.todo__item');
