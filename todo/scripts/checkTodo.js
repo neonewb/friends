@@ -1,4 +1,4 @@
-import {changeTodo} from './index.js';
+import {changeTodo} from './state.js';
 
 /**
  * Отмечает тудушку выполненной

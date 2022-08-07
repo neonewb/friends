@@ -1,20 +1,15 @@
 import {createElement} from './createElement.js';
 import {checkTodo} from './checkTodo.js';
-import {addTodo, deleteTodo} from './index.js';
+import {deleteTodo} from './state.js';
 
 /** Создание новой тудушки */
-export const createTodo = (event) => {
+export const createTodo = (title) => {
 	const newTodoContainer = createElement('todo__item-container');
 	const newTodoTitle = createElement('todo__title');
-
-	const title = event.target.value;
 
 	const newTodo = createElement('todo__item');
 	// Вставляем в новый элемент текст из инпута
 	newTodo.innerText = title;
-
-	// Добавили новую тудушку в стейт
-	addTodo(title, false)
 
 	// Вешаем слушатель на клик, чтобы отметить выполненной
 	newTodo.addEventListener('click', (event) => {

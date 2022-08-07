@@ -1,4 +1,5 @@
 import {createTodo} from './createTodo.js';
+import {addTodo} from './state.js';
 
 export const initInput = () => {
 	// Ищем список тудушек в дереве по классу todos__list
@@ -13,9 +14,13 @@ export const initInput = () => {
 	input.addEventListener('keydown', (event) => {
 		// Проверяем, что нажатая кливиша = Enter
 		if (event.key === 'Enter') {
+			const title = event.target.value
 			// Создаём новую тудушку
-			const newTodo = createTodo(event)
+			const newTodo = createTodo(title)
+			// Добавляем тудушку в стейт
+			addTodo(title, false)
 			// Вставляем новый элемент в список
+			// ToDo: перейти на render()
 			todoList.appendChild(newTodo);
 			// Очищаем инпут
 			event.target.value = '';

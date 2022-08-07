@@ -1,4 +1,4 @@
-import {deleteTodo} from './index.js';
+import {deleteTodo} from './state.js';
 
 export const initDeleteList = () => {
 	// Ищем все иконки удаления в дереве по классу todo__delete
